@@ -1,12 +1,12 @@
 const fs = require('fs');
 const express = require('express');
 
-var app = require('express')();
-var http = require('http').Server(app);
-var bodyParser = require('body-parser');
+const app = require('express')();
+const http = require('http').Server(app);
+const bodyParser = require('body-parser');
 
-var port = process.env.PORT || 3000;
-var io = require('socket.io')(http);
+const port = process.env.PORT || 3000;
+const io = require('socket.io')(http);
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
